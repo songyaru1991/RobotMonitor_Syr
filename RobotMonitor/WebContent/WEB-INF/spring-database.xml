@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+<!-- 	<property name="driverClassName" value="com.mysql.jdbc.Driver" />  -->
+		<property name="driverClassName" value="oracle.jdbc.OracleDriver" />
+		<property name="url" value="jdbc:oracle:thin:@10.8.30.242:1521:orcl" /> 
+<!--    <property name="url" value="jdbc:mysql://10.8.30.242:3306/foxlinkrobot?serverTimezone=UTC"/> -->
+		<property name="username" value="foxlinkrobot" />
+		<property name="password" value="foxlink" />
+		<!-- <property name="password" value="foxlink" /> -->
+	</bean>
+
+</beans>

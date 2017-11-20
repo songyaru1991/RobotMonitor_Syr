@@ -1,0 +1,91 @@
+@CHARSET "UTF-8";
+body{
+	padding-top:100px;
+	padding-bottom:60px;
+	 -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color:#F5F5F5;
+} 
+
+.Side{
+	padding-top:60px;
+	padding-bottom:60px;
+	left:10px;
+	bottom:10px;
+	background-color:#F5F5F5;
+}
+
+.Content{
+	padding-left:60px;
+	padding-right:60px;
+	background-image:url('../images/form_bg.png');
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+.gauge{
+	height:380px;
+}
+
+.ChartRow{
+	padding-top:20px;	
+}
+
+.titleImage{
+	padding-top:10px;
+	width:40%;
+	height:40%;
+}
+
+.logOutImage{
+	padding-top:10px;
+	width:50%;
+	height:50%;
+}
+
+label{
+	font-size:18px;
+	font-family:cursive;
+}
+
+.btn{
+	font-family:cursive;
+}
+
+.alertLabel{
+	color:red;
+	font-weight:bold;
+}
+
+.navbar-inverse{
+	background-color:#019FE8;
+	border-color: #019FE8;
+}
+
+.table td{
+	text-align: center;
+}
+
+.modal.fade .modal-dialog {
+    -webkit-transform: scale(0.1);
+    -moz-transform: scale(0.1);
+    -ms-transform: scale(0.1);
+    transform: scale(0.1);
+    top: 300px;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.modal.fade.in .modal-dialog {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform: translate3d(0, -300px, 0);
+    transform: translate3d(0, -300px, 0);
+    opacity: 1;
+}

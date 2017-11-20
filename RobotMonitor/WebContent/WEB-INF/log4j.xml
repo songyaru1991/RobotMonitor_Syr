@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="true">    
+    <appender name="email" class="org.apache.log4j.net.SMTPAppender">
+        <param name="To" value="yaru_song@foxlink.com"/>
+        <param name="From" value="MES_Sajet@foxlink.com" />
+        <param name="SMTPHost" value="192.168.64.31"/>
+        <param name="SMTPUsername" value="MES Sajet"/>
+        <param name="SMTPPassword" value="112233"/>
+        <param name="Threshold" value="ERROR"/>
+        <param name="BufferSize" value="1"/>
+        <param name="Subject" value="FoxLink Robot Monitor Web exception occured"/>
+        <layout class="org.apache.log4j.HTMLLayout">
+            <param name="ConversionPattern" value="%-d{yyyy-MM-dd HH:mm:ss}  [ %t:%r ] - [ %p ]  %m%n" />
+        </layout>
+    </appender>
+    
+    <appender name="dailyAppender" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="../logs/dailyWebLog.log"/>
+        <param name="Append" value="true"/>
+        <param name="Threshold" value="INFO" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-d{yyyy-MM-dd HH:mm:ss}  [ %t:%r ] - [ %p ]  %m%n  "/>
+        </layout>
+    </appender>
+    
+    <appender name="errorAppender" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="../logs/dailyWebErrorLog.log"/>
+        <param name="Append" value="true"/>
+        <param name="Threshold" value="ERROR"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-d{yyyy-MM-dd HH:mm:ss}  [ %l:%c:%t:%r ] - [ %p ]  %m%n"/>
+        </layout>     
+    </appender>
+    
+    <appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy/MM/dd HH:mm:ss} %-5p %m%n  " />
+        </layout>
+    </appender>
+        
+    <logger name="com.journaldev" additivity="false">
+        <level value="ALL" />
+        <appender-ref ref="dbexample"/>
+        <!-- <appender-ref ref="email"/> -->
+        <appender-ref ref="dailyAppender"/>
+        <appender-ref ref="errorAppender"/>
+        <appender-ref ref="consoleAppender"/>
+    </logger>
+     
+    <root>
+        <level value="ERROR" />
+        <appender-ref ref="dbexample" />
+        <!-- <appender-ref ref="email"/> -->
+        <appender-ref ref="dailyAppender"/>
+        <appender-ref ref="errorAppender"/>
+        <appender-ref ref="consoleAppender"/>
+    </root>
+</log4j:configuration>

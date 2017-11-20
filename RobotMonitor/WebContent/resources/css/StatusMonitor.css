@@ -1,0 +1,61 @@
+@CHARSET "UTF-8";
+body{
+	padding-top:110px;
+	padding-bottom:60px;
+	 -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color:#F5F5F5;
+} 
+
+.Side{
+	padding-top:60px;
+	padding-bottom:60px;
+	left:10px;
+	bottom:10px;
+	background-color:#F5F5F5;
+}
+
+.Content{
+	padding-left:30px;
+	padding-right:30px;
+	background-image:url('../images/form_bg.png') ;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+.titleImage{
+	padding-top:10px;
+	width:40%;
+	height:40%;
+}
+
+.logOutImage{
+	padding-top:10px;
+	width:50%;
+	height:50%;
+}
+
+label{
+	font-size:18px;
+	font-family:cursive;
+}
+
+.btn{
+	font-family:cursive;
+}
+
+.alertLabel{
+	color:red;
+	font-weight:bold;
+}
+
+.navbar-inverse{
+	background-color:#019FE8;
+	border-color: #019FE8;
+}
+
+.table td{
+	text-align: center;
+}
